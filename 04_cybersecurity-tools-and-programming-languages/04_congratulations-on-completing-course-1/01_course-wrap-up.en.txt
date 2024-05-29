@@ -1,0 +1,30 @@
+Congratulations on
+completing the first course! We've come so far and covered so much about a really
+exciting industry. I find cybersecurity to be
+exciting because it's dynamic. There are always new
+puzzles to solve, and the work of protecting
+our users is worthwhile. Before we move on,
+let's take a moment to celebrate and reflect
+on what we've covered. First, we introduced
+core security concepts, including what security
+is and why it matters. We also discussed what an entry-level security analyst does and some skills
+related to the role. Then, we transitioned to
+eight security domains, which include security
+and risk management, asset security, and
+security operations. Next, we highlighted security
+frameworks and controls. Specifically, the CIA triad model and the NIST
+Cybersecurity Framework. Finally, we explored
+common tools and programming languages used by security analysts, such as SIEMs, playbooks, SQL, and Python. I hope you're proud of the
+work you've done so far. No matter what direction you take in the
+security industry, everything you've learned lays the foundation for the
+next phase of your career. And, as you move through
+this program, you'll have the chance to
+develop your skills further. In the next course, we'll
+provide more details about several of the topics
+introduced in this course. Hi, I'm Ashley, and I
+will be guiding you through the next course of
+this certificate program. We'll discuss
+security domains and business operations
+in greater detail. I'm so glad I was able to be here for the beginning
+of your journey. You're off to a great start. I'm excited for you to reach your goal of joining
+the security industry!

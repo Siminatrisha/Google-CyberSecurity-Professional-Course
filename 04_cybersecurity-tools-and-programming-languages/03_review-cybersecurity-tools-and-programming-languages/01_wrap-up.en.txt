@@ -1,0 +1,10 @@
+That completes the introduction to
+security tools and programming languages! In this section of the course, we covered
+SIEM tools such as Splunk and Chronicle. We also discussed how SIEM tools are used
+by security analysts to complete different tasks. Then, we discussed other
+tools such as playbooks and network protocol analyzers,
+also called packet sniffers. Finally, we introduced the Linux operating
+system and the programming languages SQL and Python. Remember, the tools we discussed take
+time to understand completely. But having a basic understanding
+of these tools can help you get a job in the security field and
+progress in your career!

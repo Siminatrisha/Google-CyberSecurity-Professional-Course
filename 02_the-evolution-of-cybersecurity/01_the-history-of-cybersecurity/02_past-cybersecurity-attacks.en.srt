@@ -1,0 +1,419 @@
+1
+00:00:00,380 --> 00:00:04,260
+The security industry
+is constantly evolving,
+
+2
+00:00:04,260 --> 00:00:07,560
+but many present-day attacks
+are not entirely new.
+
+3
+00:00:07,560 --> 00:00:11,745
+Attackers often alter or
+enhance previous methods.
+
+4
+00:00:11,745 --> 00:00:14,040
+Understanding past attacks can
+
+5
+00:00:14,040 --> 00:00:16,170
+provide direction
+for how to handle
+
+6
+00:00:16,170 --> 00:00:18,000
+or investigate incidents in
+
+7
+00:00:18,000 --> 00:00:20,430
+your job as a security analyst.
+
+8
+00:00:21,430 --> 00:00:23,535
+First, let's go over
+a couple of key terms
+
+9
+00:00:23,535 --> 00:00:25,425
+that will support
+your understanding
+
+10
+00:00:25,425 --> 00:00:27,375
+of the attacks we'll discuss.
+
+11
+00:00:28,375 --> 00:00:29,040
+A computer virus is
+
+12
+00:00:29,040 --> 00:00:31,410
+malicious code written
+to interfere with
+
+13
+00:00:31,410 --> 00:00:33,420
+computer operations and cause
+
+14
+00:00:33,420 --> 00:00:35,970
+damage to data and software.
+
+15
+00:00:35,970 --> 00:00:38,300
+The virus attaches itself to
+
+16
+00:00:38,300 --> 00:00:41,570
+programs or documents
+on a computer,
+
+17
+00:00:41,570 --> 00:00:43,640
+then spreads and infects
+
+18
+00:00:43,640 --> 00:00:46,580
+one or more computers
+in a network.
+
+19
+00:00:47,580 --> 00:00:49,550
+A worm is a type of
+computer virus that can
+
+20
+00:00:49,550 --> 00:00:51,170
+duplicate and spread on its
+
+21
+00:00:51,170 --> 00:00:53,500
+own without human involvement.
+
+22
+00:00:54,500 --> 00:00:58,025
+Today, viruses are more commonly
+referred to as malware,
+
+23
+00:00:58,025 --> 00:01:02,224
+which is software designed
+to harm devices or networks.
+
+24
+00:01:03,224 --> 00:01:05,150
+Two examples of early
+malware attacks that we'll
+
+25
+00:01:05,150 --> 00:01:08,600
+cover are the Brain virus
+and the Morris worm.
+
+26
+00:01:08,600 --> 00:01:10,160
+They were created by
+
+27
+00:01:10,160 --> 00:01:13,430
+malware developers to
+accomplish specific tasks.
+
+28
+00:01:13,430 --> 00:01:17,209
+However, the developers
+underestimated the impact
+
+29
+00:01:17,209 --> 00:01:19,250
+their malware would
+have and the amount
+
+30
+00:01:19,250 --> 00:01:21,760
+of infected computers
+there would be.
+
+31
+00:01:21,760 --> 00:01:24,560
+Let's take a closer look
+at these attacks and
+
+32
+00:01:24,560 --> 00:01:25,880
+discuss how they helped shape
+
+33
+00:01:25,880 --> 00:01:28,150
+security as we know it today.
+
+34
+00:01:29,150 --> 00:01:32,510
+In 1986, the Alvi brothers
+created the Brain virus,
+
+35
+00:01:32,510 --> 00:01:35,225
+although the intention of
+the virus was to track
+
+36
+00:01:35,225 --> 00:01:37,580
+illegal copies of
+medical software
+
+37
+00:01:37,580 --> 00:01:39,815
+and prevent pirated licenses,
+
+38
+00:01:39,815 --> 00:01:42,850
+what the virus actually
+did was unexpected.
+
+39
+00:01:42,850 --> 00:01:46,340
+Once a person used a pirated
+copy of the software,
+
+40
+00:01:46,340 --> 00:01:48,605
+the virus-infected
+that computer.
+
+41
+00:01:48,605 --> 00:01:51,080
+Then, any disk that was
+
+42
+00:01:51,080 --> 00:01:54,205
+inserted into the computer
+was also infected.
+
+43
+00:01:54,205 --> 00:01:57,014
+The virus spread
+to a new computer
+
+44
+00:01:57,014 --> 00:02:00,710
+every time someone used
+one of the infected disks.
+
+45
+00:02:00,710 --> 00:02:02,870
+Undetected, the virus
+
+46
+00:02:02,870 --> 00:02:05,590
+spread globally within
+a couple of months.
+
+47
+00:02:05,590 --> 00:02:07,580
+Although the
+intention was not to
+
+48
+00:02:07,580 --> 00:02:09,920
+destroy data or hardware,
+
+49
+00:02:09,920 --> 00:02:12,530
+the virus slowed down
+productivity and
+
+50
+00:02:12,530 --> 00:02:15,865
+significantly impacted
+business operations.
+
+51
+00:02:16,865 --> 00:02:18,170
+The Brain virus fundamentally
+
+52
+00:02:18,170 --> 00:02:20,045
+altered the computing industry,
+
+53
+00:02:20,045 --> 00:02:22,310
+emphasizing the
+need for a plan to
+
+54
+00:02:22,310 --> 00:02:25,435
+maintain security
+and productivity.
+
+55
+00:02:25,435 --> 00:02:27,455
+As a security analyst,
+
+56
+00:02:27,455 --> 00:02:29,150
+you will follow and maintain
+
+57
+00:02:29,150 --> 00:02:31,220
+strategies put in
+place to ensure
+
+58
+00:02:31,220 --> 00:02:33,335
+your organization has a plan
+
+59
+00:02:33,335 --> 00:02:36,215
+to keep their data
+and people safe.
+
+60
+00:02:37,215 --> 00:02:39,970
+Another influential computer
+attack was the Morris worm.
+
+61
+00:02:39,970 --> 00:02:42,740
+In 1988, Robert Morris developed
+
+62
+00:02:42,740 --> 00:02:45,740
+a program to assess the
+size of the internet.
+
+63
+00:02:45,740 --> 00:02:49,475
+The program crawled the web
+and installed itself onto
+
+64
+00:02:49,475 --> 00:02:51,470
+other computers to
+tally the number
+
+65
+00:02:51,470 --> 00:02:54,115
+of computers that were
+connected to the internet.
+
+66
+00:02:54,115 --> 00:02:56,085
+Sounds simple, right?
+
+67
+00:02:56,085 --> 00:02:58,040
+The program, however, failed to
+
+68
+00:02:58,040 --> 00:03:00,185
+keep track of the
+computers and had
+
+69
+00:03:00,185 --> 00:03:03,350
+already compromised and
+continued to re-install
+
+70
+00:03:03,350 --> 00:03:07,520
+itself until the computers ran
+out of memory and crashed.
+
+71
+00:03:07,520 --> 00:03:10,370
+About 6,000 computers
+were affected,
+
+72
+00:03:10,370 --> 00:03:13,415
+representing 10% of the
+internet at the time.
+
+73
+00:03:14,415 --> 00:03:17,300
+This attack cost millions of
+dollars in damages due to
+
+74
+00:03:17,300 --> 00:03:19,340
+business disruptions
+and the efforts
+
+75
+00:03:19,340 --> 00:03:21,320
+required to remove the worm.
+
+76
+00:03:22,320 --> 00:03:22,925
+After the Morris worm,
+
+77
+00:03:22,925 --> 00:03:25,505
+Computer Emergency
+Response Teams,
+
+78
+00:03:25,505 --> 00:03:27,530
+known as CERTs®, were
+
+79
+00:03:27,530 --> 00:03:30,715
+established to respond to
+computer security incidents.
+
+80
+00:03:30,715 --> 00:03:33,140
+CERTs still exist today,
+
+81
+00:03:33,140 --> 00:03:35,300
+but their place in the
+security industry has
+
+82
+00:03:35,300 --> 00:03:38,345
+expanded to include
+more responsibilities.
+
+83
+00:03:39,345 --> 00:03:40,190
+Later in this program,
+
+84
+00:03:40,190 --> 00:03:41,660
+you'll learn more about
+
+85
+00:03:41,660 --> 00:03:44,300
+the core functions of
+these security teams
+
+86
+00:03:44,300 --> 00:03:46,370
+and gain hands-on practice
+
+87
+00:03:46,370 --> 00:03:48,775
+with detection and
+response tools.
+
+88
+00:03:49,775 --> 00:03:51,230
+Early attacks played a key role
+
+89
+00:03:51,230 --> 00:03:53,420
+in shaping the current
+security industry.
+
+90
+00:03:53,420 --> 00:03:55,460
+And coming up, we'll discuss how
+
+91
+00:03:55,460 --> 00:03:58,440
+attacks evolved in
+the digital age.

@@ -1,0 +1,16 @@
+Congratulations on completing the first section
+of this course! Let's quickly review what we've covered so far, before moving on. We defined security and introduced the benefits of implementing
+security in an organization. Then, we discussed different
+job responsibilities, such as managing threats and installing
+prevention software. We also introduced some
+important core skills, like collaboration and
+computer forensics. We finished by discussing
+the value of security and how it supports critical
+business functions. I hope you've gained a greater
+understanding of security. If you feel like you need a
+refresher before moving on, you can always go
+back and review any content you're unsure about. By learning the basics, you are laying the
+foundation for the rest of your
+security career. Coming up, we'll explore some well-known attacks that
+shaped the security industry. I'm excited to continue
+this journey with you!

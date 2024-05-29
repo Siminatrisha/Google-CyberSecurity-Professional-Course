@@ -1,0 +1,275 @@
+
+                <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Common Attack Pattern Enumeration and Classification (CAPEC) is a list of software weaknesses." />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link href="/css/main.css?version=3.6.102121" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/css/ie.css?version=1.7" />
+	<![endif]-->
+	
+	<script src="/includes/jquery.js" language="JavaScript" type="text/javascript"></script>
+	<script src="/includes/capec_minimizer.js" language="JavaScript" type="text/javascript"></script>
+	<script src="/includes/browserheight.js" language="JavaScript" type="text/javascript"></script>
+	<script src="/includes/cookie.js" language="Javascript" type="text/javascript"></script>
+	<link href="/css/print.css?version=1.0" rel="stylesheet" media="print" type="text/css" />
+	<noscript>
+	<style>
+		#script { visibility:collapse; visibility:hidden; font-size:0px; height:0px; width:0px  }
+		#noscript { visibility:visible; font-size:inherit;  height:inherit; width:inherit}
+	</style>
+	</noscript>
+	<title>CAPEC - 
+
+                CAPEC-55: Rainbow Table Password Cracking                (Version 3.9)
+                </title>
+</head>
+	<body bgcolor="#eeeeee" onload="onloadCookie()">
+
+<div style="background-color:#ffffff;">
+<a name="top" id="top"></a>
+<div id="MastHead">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="Masthead Table">
+	<tr>
+		<th style="width:70%"/>
+		<th style="width:30%"/>
+	</tr>
+	<tr>
+	    <td align="left" style="padding:20px 10px 10px 20px" valign="middle" nowrap="nowrap">
+		<a href="/index.html" style="color:#32498D; text-decoration:none">
+		<div>
+		<img src="/images/capec_logo_new2.gif" width="160" height="55" style="float:left;border:0;margin-right:6px" alt="CAPEC" />
+		<h1 style="color:#edef97;font-size:1.2em;font-family:'Verdana',sans-serif;text-shadow: 2px 2px #000;margin: .1em auto">Common Attack Pattern Enumeration and Classification</h1>
+		<p style="color:#fff;font-size:1em;text-shadow: 2px 2px #000;margin:.2em auto 0 auto">A Community Resource for Identifying and Understanding Attacks</p>
+		</a>
+		</div>
+	    </td>
+	    <td>
+		<div style="float:right;padding-top:0px;padding-right:14px;padding-bottom:0px;"><a href="/about/new_to_capec.html" title="New to CAPEC? Start Here"><img src="/images/new_to_capec.png" width=100" height="100" border="0" alt="New to CAPEC? Start Here" style="vertical-align:top"/></a></div>
+	    </td>
+	</tr>
+	</table>
+</div>
+
+<div id="HeaderBar" class="noprint">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" summary="Breadcrumbs and Search Table">
+	<tr>
+		<td width="100%" valign="middle" align="left" style="padding-left:10px; font-size:75%;">
+		<a href="/" >Home</a>  &gt;  <a href="/data/index.html" >CAPEC List</a>  &gt;  
+
+                CAPEC-55: Rainbow Table Password Cracking                (Version 3.9)
+                		&nbsp;
+		</td>
+		<td valign="middle" align="right" nowrap="nowrap" style="padding-right:12px">
+		
+<div class="noprint" style="text-align:right">
+  <form action="/cgi-bin/jumpmenu.cgi" style="margin-bottom:0.1em;vertical-align:center;">
+	<label for="id" style="padding-right:5px">ID Lookup:</label>
+    <input id="id" name="id" type="text" style="width:50px; font-size:80%" maxlength="10" />
+	<input value="Go" style="padding: 0px; font-size:80%" type="submit" />
+  </form>
+</div> 
+ 
+		</td>
+	</tr>
+</table>
+</div> <!--//HeaderBar-->
+<div class="yesprint">
+<hr width="100%" size="1" style="clear:both" color="#000000" />
+</div>
+
+<div class="topnav">
+<ul>
+<li><a href="/index.html">Home</a></li>
+<li>
+        <div class="dropdown">
+          <a href="/about/index.html"><button class="dropbtn">About</button></a>
+          <div class="dropdown-content">
+            <a href="/about/index.html">Overview</a>
+            <a href="/about/board.html">Board</a>
+            <a href="/about/glossary.html">Glossary</a>
+            <a href="/about/use_cases.html">Use Cases</a>
+            <a href="/about/resources.html">Resources</a>
+            <a href="/about/documents.html">Documents</a>
+            <a href="/about/faq.html">FAQs</a>
+            <a href="/about/new_to_capec.html">New to CAPEC?</a>
+          </div>
+        </div>
+</li>
+
+<li>
+        <div class="dropdown">
+          <a href="/data/index.html"><button class="dropbtn">CAPEC List</button></a>
+          <div class="dropdown-content">
+            <a href="/data/index.html">Latest Version</a>
+            <a href="/data/downloads.html">Downloads</a>
+            <a href="/data/reports.html">Reports</a>
+            <a href="/data/archive.html">Archive</a>
+          </div>
+        </div>
+</li>
+<li>
+        <div class="dropdown">
+          <a href="/community/index.html"><button class="dropbtn">Community</button></a>
+          <div class="dropdown-content">
+            <a href="/community/index.html">Community</a>
+            <a href="/community/citations.html">Citations</a>
+            <a href="/community/usage.html">Organization Usage</a>
+            <a href="/community/related.html">Related Activities</a>
+            <a href="/community/registration.html">Discussion List</a>
+            <a href="https://www.mail-archive.com/capec-research-list@mitre.org/" target="_blank" rel="noopener noreferrer">Discussion Archives</a>
+            <a href="/about/documents.html#capec_user_summit">CAPEC User Summit</a>	            
+          </div>
+        </div>
+</li>
+<li>
+        <div class="dropdown">
+          <a href="/news/index.html"><button class="dropbtn">News</button></a>
+          <div class="dropdown-content">
+            <a href="/news/index.html">Current News</a>
+            <a href="https://twitter.com/CweCapec" target="_blank" rel="noopener noreferrer">CAPEC on Twitter<img src="/images/twitter_sm.png" border="0" title="Twitter" style="position:relative; vertical-align:bottom; padding-left:3px; top:-1px"></a>
+            <a href="https://www.linkedin.com/showcase/cve-cwe-capec" target="_blank" rel="noopener noreferrer">CAPEC on LinkedIn<img src="/images/linkedin_sm.jpg" alt="LinkedIn"  width="12" height="12" style="position:relative; vertical-align:bottom; padding-left:3px; top:-1px"></a>
+            <a href="https://medium.com/@CWE_CAPEC" target="_blank" rel="noopener noreferrer">CAPEC Blog <img src="/images/medium.png" alt="Medium" width="12" height="12" style="position:relative; vertical-align:bottom; padding-left:3px; top:-1px"></a>            
+            <a href="https://outofbounds.buzzsprout.com/" target="_blank" rel="noopener noreferrer">CAPEC Podcast<img src="/images/out_of_bounds_read_logo_B_W.png" alt="Out of Bounds Read Podcast"  width="15" height="15" style="position:relative; vertical-align:bottom; padding-left:3px; top:-1px"></a>
+            <a href="https://www.youtube.com/channel/UCpY9VIpRmFK4ebD6orssifA" target="_blank" rel="noopener noreferrer">CAPEC on YouTube<img src="/images/youtube.png" alt="YouTube"  width="12" height="12" style="position:relative; vertical-align:bottom; padding-left:3px; top:-1px"></a>
+            <a href="/news/archives/index.html">News Archive</a>
+          </div>
+        </div>
+</li>
+<li style="border-color:#aaaaaa"><a href="/find/index.html">Search</a></li>
+</ul>
+</div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="MainPane"> 
+  <tr>
+	<!-- begin left side menu -->
+    <td valign="top" rowspan="2" id="LeftPane">
+	<!--include virtual="/includes/leftsidemenu.html" -->
+	<script type="text/javascript">browserheight();</script>
+	</td>
+	<!-- end left side menu -->
+    <td style="height:1px"></td>
+	<!-- begin right column -->
+	<td valign="top" align="center" rowspan="2" nowrap="nowrap" id="RightPane">
+
+                	</td>
+	<!-- end right side menu -->
+  </tr>
+  <tr>
+	<!-- begin content pane -->
+    <td valign="top" id="Contentpane" width="100%" style="word-wrap:break-word">
+    <script type="text/javascript">
+		$("#Contentpane").css('max-width', ($(window).width()-230) + 'px');
+	</script>
+
+                <script src="/includes/nav.js" language="JavaScript" type="text/javascript" /></script>
+                <noscript>
+                     <style>div.collapseblock { display:inline} </style>
+                </noscript>
+                
+            <html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" encoding="iso-8859-1">
+            <!-- Copyright (c) 2006-2023, The MITRE Corporation. CAPEC and the CAPEC logo are trademarks of The MITRE Corporation. -->
+            <a xmlns:cwe="http://cwe.mitre.org/cwe-6" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="55"></a><div xmlns:cwe="http://cwe.mitre.org/cwe-6" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" class="noprint"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="bottom"><h2 style="margin:0px 0px 2px 0px;">CAPEC-55: Rainbow Table Password Cracking</h2></td></tr></table></div><div xmlns:cwe="http://cwe.mitre.org/cwe-6" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="CAPECDefinition"><div class="title"><div class="status"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" align="left" width="33%" nowrap><div style="font-weight:bold">Attack Pattern ID: 55</div><div style="font-size:80%;"><div><b>Abstraction: <span class="Detailed">Detailed</span></b></div></div></td><td valign="top" align="center"></td><td valign="top" align="right"></td></tr></table></div></div>
+							<div id="Filter_Menu" style="padding-bottom:10px;">
+							<div style="font-size:75%; color:#000066; font-style:italic; display:inline">View customized information: </div>
+<div class="buttonlist" style="display:inline;">
+        <button id="ConceptualButton" type="button" onclick="buttonSkinSelector('conceptual');" title="For users who are interested in more notional aspects of a weakness. Example: educators, technical writers, and project/program managers.">Conceptual</button>
+        <button id="OperationalButton" type="button" onclick="buttonSkinSelector('operational');" title="For users who are concerned with the practical application and details about the nature of a weakness and how to prevent it from happening. Example: tool developers, security researchers, pen-testers, incident response analysts.">Operational</button>
+        <button id="MappingFriendlyButton" type="button" onclick="buttonSkinSelector('mappingfriendly');" title="For users who are mapping an issue to CWE/CAPEC IDs, i.e., finding the most appropriate CWE for a specific issue (e.g., a CVE record).  Example: tool developers, security researchers.">Mapping-Friendly</button>
+        <button id="CompleteButton" type="button" onclick="buttonSkinSelector('complete');" title="For users who wish to see all available information for the CWE/CAPEC entry">Complete</button>
+</div>
+
+							</div>
+						<div id="Description"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Description');"><img id="ocimg_55_Description" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Description</div><div name="oc_55_Description" id="oc_55_Description" class="expandblock"><div class="detail"><div class="indent">An attacker gets access to the database table where hashes of passwords are stored. They then use a rainbow table of pre-computed hash chains to attempt to look up the original password. Once the original password corresponding to the hash is obtained, the attacker uses the original password to gain access to the system. </div></div></div></div><div id="Extended_Description"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Extended Description');"><img id="ocimg_55_Extended Description" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Extended Description</div><div name="oc_55_Extended Description" id="oc_55_Extended Description" class="expandblock"><div class="detail"><div class="indent"><p>A password rainbow table stores hash chains for various passwords. A password chain is computed, starting from the original password, P, via a reduce(compression) function R and a hash function H. A recurrence relation exists where Xi+1 = R(H(Xi)), X0 = P. Then the hash chain of length n for the original password P can be formed: X1, X2, X3, ... , Xn-2, Xn-1, Xn, H(Xn). P and H(Xn) are then stored together in the rainbow table. Constructing the rainbow tables takes a very long time and is computationally expensive. A separate table needs to be constructed for the various hash algorithms (e.g. SHA1, MD5, etc.). However, once a rainbow table is computed, it can be very effective in cracking the passwords that have been hashed without the use of salt. </p></div></div></div></div><div id="Likelihood_Of_Attack"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Likelihood Of Attack');"><img id="ocimg_55_Likelihood Of Attack" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Likelihood Of Attack</div><div name="oc_55_Likelihood Of Attack" id="oc_55_Likelihood Of Attack" class="expandblock"><div class="detail"><div class="indent"><div id="Detail"><p>Medium</p></div></div></div></div></div><div id="Typical_Severity"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Typical Severity');"><img id="ocimg_55_Typical Severity" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Typical Severity</div><div name="oc_55_Typical Severity" id="oc_55_Typical Severity" class="expandblock"><div class="detail"><div class="indent"><div id="Detail"><p>Medium</p></div></div></div></div></div><div id="Relationships"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Relationships');"><img id="ocimg_55_Relationships" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Relationships</div><div name="oc_55_Relationships" id="oc_55_Relationships" class="expandblock"><div class="detail"><div class="indent"><span class="section tool"><img src="/images/dictionary.gif" alt="Section Help"><span class="tip">This table shows the other attack patterns and high level categories that are related to this attack pattern. These relationships are defined as ChildOf and ParentOf, and give insight to similar items that may exist at higher and lower levels of abstraction. In addition, relationships such as CanFollow, PeerOf, and CanAlsoBe are defined to show similar attack patterns that the user may want to explore.</span></span><div id="relevant_table"><div class="tabledetail"><div class="indent"><div xmlns:saxon="http://saxon.sf.net/" xmlns:xalan="http://xml.apache.org/xalan" class="tabledetail"><table width="98%" cellpadding="0" cellspacing="0" border="0" id="Detail"><tr><th valign="top" width="110px">Nature</th><th valign="top" width="40px">Type</th><th valign="top" width="50px">ID</th><th valign="top">Name</th></tr><tbody><tr class="primary Attack_Pattern parentchild"><td valign="top">ChildOf</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/standard_ap.gif" alt="Standard Attack Pattern"><span class="tip">Standard Attack Pattern - A standard level attack pattern in CAPEC is focused on a specific methodology or technique used in an attack. It is often seen as a singular piece of a fully executed attack. A standard attack pattern is meant to provide sufficient details to understand the specific technique and how it attempts to accomplish a desired goal. A standard level attack pattern is a specific type of a more abstract meta level attack pattern.</span></span></td><td valign="top">49</td><td valign="top"><a href="/data/definitions/49.html" target="_blank" rel="noopener noreferrer">Password Brute Forcing</a></td></tr><tr class="primary Attack_Pattern"><td valign="top">CanPrecede</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/meta_ap.gif" alt="Meta Attack Pattern"><span class="tip">Meta Attack Pattern - A meta level attack pattern in CAPEC is a decidedly abstract characterization of a specific methodology or technique used in an attack. A meta attack pattern is often void of a specific technology or implementation and is meant to provide an understanding of a high level approach. A meta level attack pattern is a generalization of related group of standard level attack patterns. Meta level attack patterns are particularly useful for architecture and design level threat modeling exercises.</span></span></td><td valign="top">151</td><td valign="top"><a href="/data/definitions/151.html" target="_blank" rel="noopener noreferrer">Identity Spoofing</a></td></tr><tr class="primary Attack_Pattern"><td valign="top">CanPrecede</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/meta_ap.gif" alt="Meta Attack Pattern"><span class="tip">Meta Attack Pattern - A meta level attack pattern in CAPEC is a decidedly abstract characterization of a specific methodology or technique used in an attack. A meta attack pattern is often void of a specific technology or implementation and is meant to provide an understanding of a high level approach. A meta level attack pattern is a generalization of related group of standard level attack patterns. Meta level attack patterns are particularly useful for architecture and design level threat modeling exercises.</span></span></td><td valign="top">560</td><td valign="top"><a href="/data/definitions/560.html" target="_blank" rel="noopener noreferrer">Use of Known Domain Credentials</a></td></tr><tr class="primary Attack_Pattern"><td valign="top">CanPrecede</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/detailed_ap.gif" alt="Detailed Attack Pattern"><span class="tip">Detailed Attack Pattern - A detailed level attack pattern in CAPEC provides a low level of detail, typically leveraging a specific technique and targeting a specific technology, and expresses a complete execution flow. Detailed attack patterns are more specific than meta attack patterns and standard attack patterns and often require a specific protection mechanism to mitigate actual attacks. A detailed level attack pattern often will leverage a number of different standard level attack patterns chained together to accomplish a goal.</span></span></td><td valign="top">561</td><td valign="top"><a href="/data/definitions/561.html" target="_blank" rel="noopener noreferrer">Windows Admin Shares with Stolen Credentials</a></td></tr><tr class="primary Attack_Pattern"><td valign="top">CanPrecede</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/standard_ap.gif" alt="Standard Attack Pattern"><span class="tip">Standard Attack Pattern - A standard level attack pattern in CAPEC is focused on a specific methodology or technique used in an attack. It is often seen as a singular piece of a fully executed attack. A standard attack pattern is meant to provide sufficient details to understand the specific technique and how it attempts to accomplish a desired goal. A standard level attack pattern is a specific type of a more abstract meta level attack pattern.</span></span></td><td valign="top">600</td><td valign="top"><a href="/data/definitions/600.html" target="_blank" rel="noopener noreferrer">Credential Stuffing</a></td></tr><tr class="primary Attack_Pattern"><td valign="top">CanPrecede</td><td valign="top" nowrap class="right" align="center" style="padding-top:1px"><span class="tool"><img src="/images/icons/standard_ap.gif" alt="Standard Attack Pattern"><span class="tip">Standard Attack Pattern - A standard level attack pattern in CAPEC is focused on a specific methodology or technique used in an attack. It is often seen as a singular piece of a fully executed attack. A standard attack pattern is meant to provide sufficient details to understand the specific technique and how it attempts to accomplish a desired goal. A standard level attack pattern is a specific type of a more abstract meta level attack pattern.</span></span></td><td valign="top">653</td><td valign="top"><a href="/data/definitions/653.html" target="_blank" rel="noopener noreferrer">Use of Known Operating System Credentials</a></td></tr></tbody></table></div></div></div></div><span class="section tool"><img src="/images/dictionary.gif" alt="Section Help"><span class="tip">This table shows the views that this attack pattern belongs to and top level categories within that view.</span></span><div class="indent" style="padding-bottom:10px"><table cellpadding="0" cellspacing="0" border="0" id="Detail" style="margin-right:auto;"><tr><th valign="top" width="50%">View Name</th><th valign="top" width="50%">Top Level Categories</th></tr><tr><td><a href="http://capec.mitre.org/data/definitions/3000.html" target="_blank" rel="noopener noreferrer">Domains of Attack</a></td><td><a href="http://capec.mitre.org/data/definitions/513.html" target="_blank" rel="noopener noreferrer">Software</a></td></tr><tr><td><a href="http://capec.mitre.org/data/definitions/1000.html" target="_blank" rel="noopener noreferrer">Mechanisms of Attack</a></td><td><a href="http://capec.mitre.org/data/definitions/223.html" target="_blank" rel="noopener noreferrer">Employ Probabilistic Techniques</a></td></tr></table></div></div></div></div></div><div id="Execution_Flow"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Execution Flow');"><img id="ocimg_55_Execution Flow" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Execution Flow</div><div name="oc_55_Execution Flow" id="oc_55_Execution Flow" class="expandblock"><div class="tabledetail"><div class="indent"><div id="Detail"><div class="subhead">Explore</div><ol class="indent"><li style=""><p><b>Determine application's/system's password policy: </b>Determine the password policies of the target application/system.</p><div class="indent"><table width="98%" cellpadding="0" cellspacing="0" border="0" style="margin-top:15px; margin-bottom:10px"><tr><th class="darker">Techniques</th></tr><tr><td valign="top">Determine minimum and maximum allowed password lengths. </td></tr><tr><td valign="top">Determine format of allowed passwords (whether they are required or allowed to contain numbers, special characters, etc.). </td></tr><tr><td valign="top">Determine account lockout policy (a strict account lockout policy will prevent brute force attacks). </td></tr></table></div></li><li style=""><p><b>Obtain password hashes: </b>An attacker gets access to the database table storing hashes of passwords or potentially just discovers a hash of an individual password.</p><div class="indent"><table width="98%" cellpadding="0" cellspacing="0" border="0" style="margin-top:15px; margin-bottom:10px"><tr><th class="darker">Techniques</th></tr><tr><td valign="top">Obtain copy of database table or flat file containing password hashes (by breaking access controls, using SQL Injection, etc.) </td></tr><tr><td valign="top">Obtain password hashes from platform-specific storage locations (e.g. Windows registry) </td></tr><tr><td valign="top">Sniff network packets containing password hashes. </td></tr></table></div></li></ol><div class="subhead">Exploit</div><ol class="indent"><li style="list-style-type: none;"><p><b>Run rainbow table-based password cracking tool: </b>An attacker finds or writes a password cracking tool that uses a previously computed rainbow table for the right hashing algorithm. It helps if the attacker knows what hashing algorithm was used by the password system.</p><div class="indent"><table width="98%" cellpadding="0" cellspacing="0" border="0" style="margin-top:15px; margin-bottom:10px"><tr><th class="darker">Techniques</th></tr><tr><td valign="top">Run rainbow table-based password cracking tool such as Ophcrack or RainbowCrack. Reduction function must depend on application's/system's password policy. </td></tr></table></div></li></ol></div></div></div></div></div><div id="Prerequisites"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Prerequisites');"><img id="ocimg_55_Prerequisites" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Prerequisites</div><div name="oc_55_Prerequisites" id="oc_55_Prerequisites" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top">Hash of the original password is available to the attacker. For a better chance of success, an attacker should have more than one hash of the original password, and ideally the whole table. </td></tr>
+            <tr><td valign="top">Salt was not used to create the hash of the original password. Otherwise the rainbow tables have to be re-computed, which is very expensive and will make the attack effectively infeasible (especially if salt was added in iterations). </td></tr>
+            <tr><td valign="top">The system uses one factor password based authentication. </td></tr>
+         </table></div></div></div></div></div><div id="Skills_Required"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Skills_Required');"><img id="ocimg_55_Skills_Required" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Skills Required</div><div name="oc_55_Skills_Required" id="oc_55_Skills_Required" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top"><div style="font-weight:bold">[Level: Low]</div>A variety of password cracking tools are available that can leverage a rainbow table. The more difficult part is to obtain the password hash(es) in the first place. </td></tr>
+         </table></div></div></div></div></div><div id="Resources_Required"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Resources_Required');"><img id="ocimg_55_Resources_Required" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Resources Required</div><div name="oc_55_Resources_Required" id="oc_55_Resources_Required" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top">Rainbow table of password hash chains with the right algorithm used. A password cracking tool that leverages this rainbow table will also be required. Hash(es) of the password is required. </td></tr>
+         </table></div></div></div></div></div><div id="Indicators"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Indicators');"><img id="ocimg_55_Indicators" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Indicators</div><div name="oc_55_Indicators" id="oc_55_Indicators" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top">This is a completely offline attack that an attacker can perform at their leisure after the password hashes are obtained. </td></tr>
+         </table></div></div></div></div></div><div id="Consequences"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Consequences');"><img id="ocimg_55_Consequences" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Consequences</div><div name="oc_55_Consequences" id="oc_55_Consequences" class="expandblock"><div class="tabledetail"><div class="indent"><span class="section tool"><img src="/images/dictionary.gif" alt="Section Help"><span class="tip">This table specifies different individual consequences associated with the attack pattern. The Scope identifies the security property that is violated, while the Impact describes the negative technical impact that arises if an adversary succeeds in their attack. The Likelihood provides information about how likely the specific consequence is expected to be seen relative to the other consequences in the list. For example, there may be high likelihood that a pattern will be used to achieve a certain impact, but a low likelihood that it will be exploited to achieve a different impact.</span></span><table style="max-width:100%; min-width:98%" cellpadding="0" cellspacing="0" border="0" id="Detail"><tr><th valign="middle" width="135px" nowrap>Scope</th><th valign="middle">Impact</th><th valign="middle" width="100px" nowrap>Likelihood</th></tr><tr><td valign="top"><div>Confidentiality</div><div>Access Control</div><div>Authorization</div></td><td valign="top"><div>Gain Privileges</div></td><td valign="top"></td></tr></table></div></div></div></div><div id="Mitigations"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Mitigations');"><img id="ocimg_55_Mitigations" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Mitigations</div><div name="oc_55_Mitigations" id="oc_55_Mitigations" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top">Use salt when computing password hashes. That is, concatenate the salt (random bits) with the original password prior to hashing it. </td></tr>
+         </table></div></div></div></div></div><div id="Example_Instances"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Example_Instances');"><img id="ocimg_55_Example_Instances" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Example Instances</div><div name="oc_55_Example_Instances" id="oc_55_Example_Instances" class="expandblock"><div class="detail"><div class="indent"><div id="Grouped"><table width="98%" cellpadding="0" cellspacing="0" border="0" class="Detail">
+            <tr><td valign="top">BusyBox 1.1.1 does not use a salt when generating passwords, which makes it easier for local users to guess passwords from a stolen password file using techniques such as rainbow tables. See also: <a target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1058 ">CVE-2006-1058 </a></td></tr>
+         </table></div></div></div></div></div><div id="Related_Weaknesses"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Related Weaknesses');"><img id="ocimg_55_Related Weaknesses" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Related Weaknesses</div><div name="oc_55_Related Weaknesses" id="oc_55_Related Weaknesses" class="expandblock"><div class="tabledetail"><div class="indent"><span class="section tool"><img src="/images/dictionary.gif" alt="Section Help"><span class="tip">A Related Weakness relationship associates a weakness with this attack pattern. Each association implies a weakness that must exist for a given attack to be successful. If multiple weaknesses are associated with the attack pattern, then any of the weaknesses (but not necessarily all) may be present for the attack to be successful. Each related weakness is identified by a CWE identifier.</span></span><table style="max-width:100%; min-width:98%" cellpadding="0" cellspacing="0" border="0" id="Detail"><tr><th valign="top" nowrap>CWE-ID</th><th valign="top" width="100%">Weakness Name</th></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/261.html" target="_blank" rel="noopener noreferrer">261</a></td><td valign="top">Weak Encoding for Password</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/521.html" target="_blank" rel="noopener noreferrer">521</a></td><td valign="top">Weak Password Requirements</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/262.html" target="_blank" rel="noopener noreferrer">262</a></td><td valign="top">Not Using Password Aging</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/263.html" target="_blank" rel="noopener noreferrer">263</a></td><td valign="top">Password Aging with Long Expiration</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/654.html" target="_blank" rel="noopener noreferrer">654</a></td><td valign="top">Reliance on a Single Factor in a Security Decision</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/916.html" target="_blank" rel="noopener noreferrer">916</a></td><td valign="top">Use of Password Hash With Insufficient Computational Effort</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/308.html" target="_blank" rel="noopener noreferrer">308</a></td><td valign="top">Use of Single-factor Authentication</td></tr>
+            <tr><td valign="top"><a href="http://cwe.mitre.org/data/definitions/309.html" target="_blank" rel="noopener noreferrer">309</a></td><td valign="top">Use of Password System for Primary Authentication</td></tr>
+         </table></div></div></div></div><div id="Taxonomy_Mappings"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Taxonomy Mappings');"><img id="ocimg_55_Taxonomy Mappings" src="/images/head_more.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Taxonomy Mappings</div><div name="oc_55_Taxonomy Mappings" id="oc_55_Taxonomy Mappings" class="expandblock"><div class="tabledetail"><div class="indent"><span class="section tool"><img src="/images/dictionary.gif" alt="Section Help"><span class="tip">CAPEC mappings to ATT&amp;CK techniques leverage an inheritance model to streamline and minimize direct CAPEC/ATT&amp;CK mappings. Inheritance of a mapping is indicated by text stating that the parent CAPEC has relevant ATT&amp;CK mappings. Note that the ATT&amp;CK Enterprise Framework does not use an inheritance model as part of the mapping to CAPEC.</span></span><div class="tax_title">Relevant to the ATT&amp;CK taxonomy mapping (also see <a href="/data/definitions/49.html" target="_blank" rel="noopener noreferrer">parent</a>)</div><table style="max-width:100%; min-width:98%" cellpadding="0" cellspacing="0" border="0" id="Detail"><tr><th valign="top" nowrap>Entry ID</th><th valign="top" width="100%">Entry Name</th></tr><tr><td valign="top"><a href="https://attack.mitre.org/wiki/Technique/T1110/002" target="_blank" rel="noopener noreferrer">1110.002</a></td><td valign="top">Brute Force:Password Cracking</td></tr></table></div></div></div></div><div id="Content_History"><div class="heading"><span id="script"><a href="javascript:toggleblocksOC('55_Content History');"><img id="ocimg_55_Content History" src="/images/head_less.gif" border="0" style="background-color: #DCDCC5" alt="+"></a> </span>Content History</div><div name="oc_55_Content History" id="oc_55_Content History" class="collapseblock"><div class="tabledetail"><div class="indent"><div style="margin-top: 10px"><table style="max-width:100%; min-width:98%" cellpadding="0" cellspacing="0" border="0" ID="Detail"><tbody class="Submissions"><tr><th valign="top" colspan="3" class="title">Submissions</th></tr><tr><th valign="top">Submission Date</th><th valign="top" nowrap>Submitter</th><th valign="top" nowrap>Organization</th></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2014-06-23<div style="display:inline-block; padding-left:2em;">(Version 2.6)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee"></td></tr></tbody><tbody class="Modifications"><tr><th valign="top" colspan="3" class="title">Modifications</th></tr><tr><th valign="top">Modification Date</th><th valign="top" nowrap>Modifier</th><th valign="top" nowrap>Organization</th></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2019-04-04<div style="display:inline-block; padding-left:2em;">(Version 3.1)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee">Updated Related_Weaknesses</td></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2020-07-30<div style="display:inline-block; padding-left:2em;">(Version 3.3)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee">Updated Description, Related_Attack_Patterns, Related_Weaknesses, Taxonomy_Mappings</td></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2020-12-17<div style="display:inline-block; padding-left:2em;">(Version 3.4)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee">Updated @Abstraction, Related_Attack_Patterns</td></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2021-06-24<div style="display:inline-block; padding-left:2em;">(Version 3.5)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee">Updated Related_Weaknesses</td></tr><tr><td valign="top" nowrap rowspan="2" style="border-bottom:1px solid #BAC5E3">2022-02-22<div style="display:inline-block; padding-left:2em;">(Version 3.7)</div></td><td valign="top">CAPEC Content Team</td><td valign="top">The MITRE Corporation</td></tr><tr><td valign="top" colspan="2" style="border-bottom:1px solid #BAC5E3; background-color:#eeeeee">Updated Description, Extended_Description</td></tr></tbody></table></div></div></div></div></div></div></html>
+            	 <div id="More_Message">
+<div style="background-color:#33332C; padding:2px; color:#ffffff; font-size:95%; text-align:center" >More information is available &mdash; Please select a different filter.</div></div>
+
+	</td>
+	<!-- end content pane -->
+  </tr>
+</table>
+<div id="FootPane" class="noprint">
+  <div id="footbar">
+    <b>Page Last Updated or Reviewed: </b>
+
+            October 21, 2021
+              </div>
+  <div class="Footer noprint">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="ltgreybackground" style="clear:both" summary="Footer Table">
+      <tr>
+        <td colspan="3" id="line"><div class="line">&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td valign="middle" nowrap="nowrap">
+          <div id="footerlinks" class="footlogo">
+            <a href="https://www.mitre.org" target="_blank"><img src="/images/mitre_logo.gif" height="36" border="0" alt="MITRE"/></a>
+          </div>
+        </td>
+        <td width="100%" valign="top" style="padding:6px 0px;">
+          <div id="footerlinks">
+            <a href="/sitemap.html">Site Map</a> |
+            <a href="/about/termsofuse.html">Terms of Use</a> |
+            <a href="/about/privacy_policy.html">Privacy Policy</a> |
+            <a href="mailto:capec@mitre.org">Contact Us</a> |
+            <a target="_blank" href="https://twitter.com/CweCapec"><img src="/images/twitter.jpg" width="20" height="20" style="border:0;vertical-align:right;" alt="CAPEC on Twitter" title="CAPEC on Twitter"></a>
+            <a target="_blank" href="https://www.linkedin.com/showcase/cve-cwe-capec"><img src="/images/linkedin_sm.jpg" width="20" height="20" style="border:0;vertical-align:right;" alt="CAPEC on LinkedIn" title="CAPEC on LinkedIn"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCpY9VIpRmFK4ebD6orssifA"><img src="/images/youtube.png" width="20" height="20" style="border:0;vertical-align:right;" alt="CAPEC on YouTube" title="CAPEC on YouTube"></a>
+            <a target="_blank" href="https://outofbounds.buzzsprout.com/"><img src="/images/out_of_bounds_read_sm.png" width="20" height="20" style="border:0;vertical-align:right;" alt="CAPEC Out-of-Bounds-Read Podcast" title="CAPEC Out-of-Bounds-Read Podcast"></a>
+            <a target="_blank" href="https://medium.com/@CWE_CAPEC"><img src="/images/medium.png" width="20" height="20" style="border:0;vertical-align:right;" alt="CAPEC Blog on Medium" title="CAPEC Blog on Medium"></a>                        
+          </div>
+          <p>Use of the Common Attack Pattern Enumeration and Classification (CAPEC), and the associated references from this website are subject to the <a href="/about/termsofuse.html">Terms of Use</a>. CAPEC is sponsored by the <a target="_blank" rel="noopener noreferrer" href="https://www.dhs.gov/">U.S. Department of Homeland Security</a> (DHS) <a target="_blank" rel="noopener noreferrer" href="https://www.dhs.gov/cisa/cybersecurity-division">Cybersecurity and Infrastructure Security Agency</a> (CISA) and managed by the <a href="https://www.dhs.gov/science-and-technology/hssedi" target="_blank" rel="noopener noreferrer">Homeland Security Systems Engineering and Development Institute</a> (HSSEDI) which is operated by <a target="_blank" rel="noopener noreferrer" href="http://www.mitre.org/">The MITRE Corporation</a> (MITRE). Copyright &copy; 2007&ndash;2023, The MITRE Corporation. CAPEC and the CAPEC logo are trademarks of The MITRE Corporation.</p>
+        </td>
+        <td valign="middle" nowrap="nowrap">
+          <div id="footerlinks" class="footlogo">
+            <a href="https://www.dhs.gov/science-and-technology/hssedi" target="_blank" rel="noopener noreferrer"><img src="/images/hssedi.png" height="36" border="0" alt="HSSEDI" title="HSSEDI"/></a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-12242070-1']);
+_gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
+
+            
+            

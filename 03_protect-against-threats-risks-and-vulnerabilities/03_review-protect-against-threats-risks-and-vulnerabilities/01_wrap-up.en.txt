@@ -1,0 +1,19 @@
+You are now better prepared
+to understand and help make decisions regarding
+assessing and managing risks. Let's review what we've covered. We discussed security
+frameworks and controls and how
+they're used to develop processes and procedures that protect organizations and
+the people they serve. We also discussed core
+components of frameworks, such as identifying
+security goals and establishing guidelines
+to achieve those goals. Then, we introduced specific
+frameworks and controls, including the CIA triad
+and the NIST CSF, and how they are
+used to manage risk. And finally, we discussed
+security ethics, including common
+ethical issues to consider, such as
+confidentiality, privacy protections, and laws. You're almost there, only one more section to go
+in this course. Coming up, you'll learn
+about common tools and programming languages used by security analysts to protect
+organizational operations. Hope you're as excited
+as I am to keep going!

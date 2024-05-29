@@ -1,0 +1,445 @@
+1
+00:00:00,080 --> 00:00:02,760
+Hi, welcome back!
+
+2
+00:00:02,760 --> 00:00:04,980
+Previously, we
+discussed frameworks
+
+3
+00:00:04,980 --> 00:00:06,375
+and controls in general.
+
+4
+00:00:06,375 --> 00:00:08,010
+In this video,
+you'll learn about
+
+5
+00:00:08,010 --> 00:00:11,040
+specific frameworks and
+controls that organizations
+
+6
+00:00:11,040 --> 00:00:13,290
+can voluntarily use to minimize
+
+7
+00:00:13,290 --> 00:00:16,125
+risks to their data
+and to protect users.
+
+8
+00:00:16,125 --> 00:00:18,085
+Let's get started!
+
+9
+00:00:19,085 --> 00:00:21,780
+The CIA triad is a foundational model
+
+10
+00:00:21,780 --> 00:00:24,390
+that helps inform how
+organizations consider
+
+11
+00:00:24,390 --> 00:00:27,840
+risk when setting up systems
+and security policies.
+
+12
+00:00:27,840 --> 00:00:31,050
+CIA stands for confidentiality,
+
+13
+00:00:31,050 --> 00:00:33,645
+integrity, and availability.
+
+14
+00:00:34,645 --> 00:00:37,320
+Confidentiality means that
+only authorized users
+
+15
+00:00:37,320 --> 00:00:40,260
+can access specific
+assets or data.
+
+16
+00:00:40,260 --> 00:00:43,760
+For example, strict
+access controls that
+
+17
+00:00:43,760 --> 00:00:47,630
+define who should and should
+not have access to data,
+
+18
+00:00:47,630 --> 00:00:49,370
+must be put in place to ensure
+
+19
+00:00:49,370 --> 00:00:51,940
+confidential data remains safe.
+
+20
+00:00:52,940 --> 00:00:54,290
+Integrity means the data is
+
+21
+00:00:54,290 --> 00:00:57,100
+correct, authentic,
+and reliable.
+
+22
+00:00:57,100 --> 00:00:58,880
+To maintain integrity,
+
+23
+00:00:58,880 --> 00:01:01,310
+security professionals
+can use a form of
+
+24
+00:01:01,310 --> 00:01:03,125
+data protection like encryption
+
+25
+00:01:03,125 --> 00:01:05,585
+to safeguard data from
+being tampered with.
+
+26
+00:01:06,585 --> 00:01:08,120
+Availability means data is
+
+27
+00:01:08,120 --> 00:01:11,015
+accessible to those who are
+authorized to access it.
+
+28
+00:01:11,015 --> 00:01:13,670
+As an example, a
+director may have
+
+29
+00:01:13,670 --> 00:01:16,730
+more access to certain data
+than a department manager
+
+30
+00:01:16,730 --> 00:01:19,984
+because directors usually
+oversee more employees.
+
+31
+00:01:20,984 --> 00:01:22,010
+Let's define a term
+that came up during
+
+32
+00:01:22,010 --> 00:01:24,110
+our discussion of the CIA triad:
+
+33
+00:01:24,110 --> 00:01:25,500
+asset.
+
+34
+00:01:25,500 --> 00:01:29,840
+An asset is an item perceived as having
+value to an organization.
+
+35
+00:01:29,840 --> 00:01:31,870
+And value is determined by the cost
+
+36
+00:01:31,870 --> 00:01:34,225
+associated with the
+asset in question.
+
+37
+00:01:34,225 --> 00:01:37,960
+For example, an application
+that stores sensitive data,
+
+38
+00:01:37,960 --> 00:01:41,080
+such as social security
+numbers or bank accounts,
+
+39
+00:01:41,080 --> 00:01:43,615
+is a valuable asset
+to an organization.
+
+40
+00:01:43,615 --> 00:01:46,344
+It carries more risk
+and therefore requires
+
+41
+00:01:46,344 --> 00:01:48,865
+tighter security
+controls in comparison
+
+42
+00:01:48,865 --> 00:01:52,030
+to a website that shares
+publicly available news content.
+
+43
+00:01:53,030 --> 00:01:53,620
+As you may remember,
+
+44
+00:01:53,620 --> 00:01:54,700
+earlier in the course,
+
+45
+00:01:54,700 --> 00:01:57,520
+we discussed frameworks
+and controls in general.
+
+46
+00:01:57,520 --> 00:02:00,730
+Now, we'll discuss a specific
+framework developed by
+
+47
+00:02:00,730 --> 00:02:02,200
+the U.S.-based National
+
+48
+00:02:02,200 --> 00:02:04,595
+Institute of Standards
+and Technology:
+
+49
+00:02:04,595 --> 00:02:06,890
+the Cybersecurity
+Framework, also
+
+50
+00:02:06,890 --> 00:02:09,625
+referred to as the NIST CSF.
+
+51
+00:02:09,625 --> 00:02:12,110
+The NIST Cybersecurity
+Framework is
+
+52
+00:02:12,110 --> 00:02:15,005
+a voluntary framework that
+consists of standards,
+
+53
+00:02:15,005 --> 00:02:17,120
+guidelines, and best practices
+
+54
+00:02:17,120 --> 00:02:19,175
+to manage cybersecurity risk.
+
+55
+00:02:19,175 --> 00:02:21,890
+It's important to become
+familiar with this framework
+
+56
+00:02:21,890 --> 00:02:23,720
+because security teams use it as
+
+57
+00:02:23,720 --> 00:02:27,145
+a baseline to manage
+short and long-term risk.
+
+58
+00:02:28,145 --> 00:02:29,720
+Managing and mitigating
+risks and protecting
+
+59
+00:02:29,720 --> 00:02:31,280
+an organization's assets from
+
+60
+00:02:31,280 --> 00:02:34,570
+threat actors are key goals
+for security professionals.
+
+61
+00:02:34,570 --> 00:02:36,395
+Understanding the
+different motives
+
+62
+00:02:36,395 --> 00:02:38,000
+a threat actor may have,
+
+63
+00:02:38,000 --> 00:02:40,310
+alongside identifying
+your organization's
+
+64
+00:02:40,310 --> 00:02:42,790
+most valuable assets
+is important.
+
+65
+00:02:43,790 --> 00:02:45,170
+Some of the most
+dangerous threat actors
+
+66
+00:02:45,170 --> 00:02:47,495
+to consider are
+disgruntled employees.
+
+67
+00:02:47,495 --> 00:02:50,270
+They are the most dangerous
+because they often have
+
+68
+00:02:50,270 --> 00:02:52,054
+access to sensitive information
+
+69
+00:02:52,054 --> 00:02:53,860
+and know where to find it.
+
+70
+00:02:53,860 --> 00:02:56,480
+In order to reduce
+this type of risk,
+
+71
+00:02:56,480 --> 00:02:58,310
+security professionals would use
+
+72
+00:02:58,310 --> 00:02:59,960
+the principle of availability,
+
+73
+00:02:59,960 --> 00:03:02,150
+as well as organizational
+guidelines
+
+74
+00:03:02,150 --> 00:03:03,950
+based on frameworks to ensure
+
+75
+00:03:03,950 --> 00:03:05,840
+staff members can only access
+
+76
+00:03:05,840 --> 00:03:08,435
+the data they need to
+perform their jobs.
+
+77
+00:03:09,435 --> 00:03:11,780
+Threat actors originate
+from all across the globe,
+
+78
+00:03:11,780 --> 00:03:14,420
+and a diverse workforce
+of security professionals
+
+79
+00:03:14,420 --> 00:03:17,975
+helps organizations identify
+attackers' intentions.
+
+80
+00:03:17,975 --> 00:03:21,515
+A variety of perspectives
+can assist organizations in
+
+81
+00:03:21,515 --> 00:03:23,090
+understanding and mitigating
+
+82
+00:03:23,090 --> 00:03:25,415
+the impact of
+malicious activity.
+
+83
+00:03:26,415 --> 00:03:27,560
+That concludes our
+introduction to
+
+84
+00:03:27,560 --> 00:03:31,115
+the CIA triad and
+NIST CSF framework,
+
+85
+00:03:31,115 --> 00:03:33,080
+which are used to
+develop processes to
+
+86
+00:03:33,080 --> 00:03:36,020
+secure organizations and
+the people they serve.
+
+87
+00:03:37,020 --> 00:03:38,450
+You may be asked in
+an interview if you
+
+88
+00:03:38,450 --> 00:03:40,970
+know about security
+frameworks and principles.
+
+89
+00:03:40,970 --> 00:03:43,220
+Or you may be asked to
+explain how they're
+
+90
+00:03:43,220 --> 00:03:46,315
+used to secure
+organizational assets.
+
+91
+00:03:46,315 --> 00:03:48,935
+In either case,
+throughout this program,
+
+92
+00:03:48,935 --> 00:03:50,660
+you'll have multiple
+opportunities
+
+93
+00:03:50,660 --> 00:03:51,950
+to learn more about them
+
+94
+00:03:51,950 --> 00:03:55,295
+and apply what we've discussed
+to real-world situations.
+
+95
+00:03:56,295 --> 00:03:57,320
+Coming up, we'll discuss
+
+96
+00:03:57,320 --> 00:04:01,270
+the ethics of security.
+See you soon!
